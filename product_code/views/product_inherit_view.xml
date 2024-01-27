@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="product_inherit_view" model="ir.ui.view">
+        <field name="name">Code Product</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='parent_id']" position="after">
+                <button string="Generate Sequence" type="object" name="generate_sequence" class="oe_highlight"/>
+                <field name="sequence_id"/>
+                <field name="code"/>
+
+
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
